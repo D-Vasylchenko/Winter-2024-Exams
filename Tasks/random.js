@@ -1,11 +1,4 @@
 // Generate random integer value in given range
 'use strict';
-const random = (min, max = min) => {
-    const randNum = Math.random();
-    const scaledNum = randNum * (max - min + 1);
-    const floorNum = Math.floor(scaledNum);
-    const finalNum = min + floorNum;
-    return finalNum;
-};
-
+const random = (min, max = min) => min + Math.floor(Math.random() * (max - min + 1));
 module.exports = random;
